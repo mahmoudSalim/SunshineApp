@@ -24,6 +24,12 @@
     <!--or something similar.-->
     <string name="app_name">Sunshine</string>
 
+    <!--Used in overflow menu to refresh weather data-->
+    <string name="action_refresh">Refresh</string>
+
+    <!--TODO (1) Add a string resource for your error message-->
+    <!--for error message-->
+    <string name="error_messege">Error! fail loading data</string>
 
     <!-- - - - - - - - - - - - - -->
     <!--Used by SunshineDateUtils-->
