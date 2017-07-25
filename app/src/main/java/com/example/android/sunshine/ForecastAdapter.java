@@ -29,16 +29,12 @@ import android.widget.TextView;
  */
 public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapterViewHolder> {
 
-    // COMPLETED (3) Create a final private ForecastAdapterOnClickHandler called mClickHandler
     /*
      * An on-click handler that we've defined to make it easy for an Activity to interface with
      * our RecyclerView
      */
     private final ForecastAdapterOnClickHandler mClickHandler;
     private String[] mWeatherData;
-
-    // COMPLETED (1) Add an interface called ForecastAdapterOnClickHandler
-    // COMPLETED (2) Within that interface, define a void method that access a String as a parameter
 
     /**
      * Creates a ForecastAdapter.
@@ -49,8 +45,6 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
     public ForecastAdapter(ForecastAdapterOnClickHandler clickHandler) {
         mClickHandler = clickHandler;
     }
-
-    // COMPLETED (4) Add a ForecastAdapterOnClickHandler as a parameter to the constructor and store it in mClickHandler
 
     /**
      * This gets called when each new ViewHolder is created. This happens when the RecyclerView
@@ -73,8 +67,6 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
         View view = inflater.inflate(layoutIdForListItem, viewGroup, shouldAttachToParentImmediately);
         return new ForecastAdapterViewHolder(view);
     }
-
-    // COMPLETED (5) Implement OnClickListener in the ForecastAdapterViewHolder class
 
     /**
      * OnBindViewHolder is called by the RecyclerView to display the data at the specified
@@ -132,11 +124,8 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
         public ForecastAdapterViewHolder(View view) {
             super(view);
             mWeatherTextView = (TextView) view.findViewById(R.id.tv_weather_data);
-            // COMPLETED (7) Call setOnClickListener on the view passed into the constructor (use 'this' as the OnClickListener)
             view.setOnClickListener(this);
         }
-
-        // COMPLETED (6) Override onClick, passing the clicked day's data to mClickHandler via its onClick method
 
         /**
          * This gets called by the child views during a click.
